@@ -90,8 +90,8 @@ function añadir(name){
   newButton.addEventListener("click",function(){ 
     
     let nombrecillo=window.prompt("Nombre a añadir");
-    for (let i=0; c<document.getElementsByTagName("span").length;i++){
-      if (nombrecillo==document.getElementsByTagName("span")[i].innerHTML){
+    for (let c=0; c<document.getElementsByTagName("span").length;c++){
+      if (nombrecillo==document.getElementsByTagName("span")[c].innerHTML){
         document.getElementById("d").style.display="block";
         document.getElementById("d").innerHTML="No se pueden repetir nombres";
         return false
@@ -113,6 +113,7 @@ function añadir(name){
     console.log(res)
     if (res=true){
       newLi.remove();
+
   }
   });
 
