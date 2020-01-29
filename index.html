@@ -10,17 +10,20 @@
 <body>
   <div class="wrapper">
     <header>
+      <div id="d"></div>
       <h1>Torneo de Ping Pong</h1>
       <p>Práctica de DOM de DWEC</p>
-      <form id="registrar" onsubmit="añadir()">
+      <form id="registrar">
         <input type="text" name="name" placeholder="Invitar a alguien" id="nombreAñadir">
-        <button type="submit" name="submit" value="submit">Enviar</button>
+        <button type="submit" name="submit" value="submit" id="añadirNombre">Enviar</button>
       </form>
     </header>
 		
-    <div class="main">	
-      
+    <div class="main"><br><br>
       <h2>Invitados</h2>
+      
+      <label class="confirmados">Mostrar confirmados<input type="checkbox" id="confirmados" name="confirmados" class="confirmados"></label><br>
+      
       <ul id="invitedList" class="">
 	      <!--<li>
 		      <span>María</span>
@@ -45,6 +48,7 @@
 	    
     </div>
   </div>
+  
 </body>
 <script src="Codiguito.js"></script>
 </html>

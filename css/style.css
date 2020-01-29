@@ -141,6 +141,12 @@ div > label {
 .not-responded {
   transition: 0.4s;
 }
+.confirmados{
+  float: right;
+}
+#d{
+  background-color: red;
+}
 
 /* ================================= 
   Media Queries
