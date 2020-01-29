@@ -27,7 +27,7 @@ function añadir(name){
   for (let c=0; c<document.getElementsByTagName("span").length;c++){
     if (invitado==document.getElementsByTagName("span")[c].innerHTML){
       document.getElementById("d").style.display="block";
-      document.getElementById("d").innerHTML="No se pueden repetir nombres";
+      document.getElementById("d").innerHTML="No puede haber 2 nombres iguales";
       return false
     }
     else{
@@ -78,7 +78,11 @@ function añadir(name){
       for (let i=0; lista;i++){
             if (lista.item(i).firstChild.firstChild.textContent==nombre){
               document.getElementById("d").innerHTML="Error, no puede poner dos nombre iguales";
+              document.getElementById("d").style.display="block"
               nombre=confirmados.item(i);
+            }
+            else {
+              document.getElementById("d").style.display="none"
             }
     }})
     
@@ -88,19 +92,26 @@ function añadir(name){
   newButton.appendChild(newContent);
 
   newButton.addEventListener("click",function(){ 
-    
     let nombrecillo=window.prompt("Nombre a añadir");
-    for (let c=0; c<document.getElementsByTagName("span").length;c++){
+    let c=0;
+    
+    if(nombrecillo==""){
+      document.getElementById("d").style.display="block"
+      document.getElementById("d").innerHTML="Introduzca un nombre"
+      return false
+    }
+    
+    
+    for (c; c<document.getElementsByTagName("span").length;c++){
       if (nombrecillo==document.getElementsByTagName("span")[c].innerHTML){
         document.getElementById("d").style.display="block";
         document.getElementById("d").innerHTML="No se pueden repetir nombres";
-        return false
+        return false;
       } 
-      else{ 
+    }
+     
     document.getElementById("d").style.display="none";
     newButton.parentElement.firstChild.innerText = nombrecillo;
-      }
-    }   
   });
 
   let newButton2=document.createElement("button");
