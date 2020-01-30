@@ -75,6 +75,7 @@ function añadir(name){
       /*let confirmados=lista.getElementsByClassName("not-responded");
       let n=lista.getElementsByClassName("responded");
       let nombre=confirmados.item(0).firstChild.textContent;*/
+      
       for (let i=0; lista;i++){
             if (lista.item(i).firstChild.firstChild.textContent==nombre){
               document.getElementById("d").innerHTML="Error, no puede poner dos nombre iguales";
