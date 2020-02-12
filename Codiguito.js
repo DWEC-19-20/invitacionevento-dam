@@ -21,8 +21,16 @@ spanamodificar=document.createTextNode("");
 document.getElementById("añadirNombre").addEventListener("click",añadir);
 
 function añadir(name){
+
+  
   event.preventDefault();
 
+  if (document.getElementById("nombreAñadir").value==""){
+    document.getElementById("d").style.display="block";
+    document.getElementById("d").innerHTML="No puede estar vacio"
+  }
+  else{
+    document.getElementById("d").style.display="none";
   let invitado=document.getElementById("nombreAñadir").value;
   for (let c=0; c<document.getElementsByTagName("span").length;c++){
     if (invitado==document.getElementsByTagName("span")[c].innerHTML){
@@ -136,7 +144,7 @@ function añadir(name){
 }
 
 document.getElementById("confirmados").addEventListener("change", function(){
-  let lista=document.getElementById("invitedList");
+  let lista=document.getElementById(" ");
   let confirmados=lista.getElementsByClassName("not-responded");
   if (this.checked){
     for (let i=0; confirmados;i++){
@@ -160,5 +168,5 @@ document.getElementById("confirmados").addEventListener("change", function(){
     }
   }
 )
-
+}
 
