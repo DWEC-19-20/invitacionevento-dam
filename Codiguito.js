@@ -144,7 +144,7 @@ function añadir(name){
 }
 
 document.getElementById("confirmados").addEventListener("change", function(){
-  let lista=document.getElementById(" ");
+  let lista=document.getElementById("invitedList");
   let confirmados=lista.getElementsByClassName("not-responded");
   if (this.checked){
     for (let i=0; confirmados;i++){
